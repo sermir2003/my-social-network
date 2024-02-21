@@ -1,0 +1,22 @@
+@startuml c4-systems
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+
+skinparam wrapWidth 250
+skinparam wrapMessageWidth 400
+LAYOUT_WITH_LEGEND()
+
+title
+    Социальная сеть, C4 диаграмма систем
+end title
+
+System(main, "Главный сервис", "Коммуникация с пользователем")
+System(stats, "Сервис статистик", "Подсчёт просмотров и реакций у постов и комментариев")
+System(heavy_ugc, "Сервис UGC", "Управление user-genered content'ом: постами и комментариями")
+
+Person(user, "Пользователь")
+
+Rel(user, main, "Всё API пользователя", "", "регистрация; авторизация; чтение, публикация, изменение, удаление постов и комментариев; реакции на посты и комментарии")
+Rel(main, stats, "Информирование об активностях", "", "просмотры, реакции")
+Rel(main, heavy_ugc, "Работа с UGC", "", "чтение, публикация, изменение, удаление постов и комментариев")
+
+@enduml
