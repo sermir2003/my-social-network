@@ -1,11 +1,11 @@
-@startuml c4-systems
+@startuml c4d-systems
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 skinparam wrapWidth 300
 LAYOUT_WITH_LEGEND()
 
 title
-    Социальная сеть, C4 диаграмма систем
+    C4 диаграмма систем
 end title
 
 System_Boundary(main, "Главный сервис") {

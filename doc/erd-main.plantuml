@@ -1,4 +1,4 @@
-@startuml er-main
+@startuml erd-main
 
 skinparam linetype ortho
 

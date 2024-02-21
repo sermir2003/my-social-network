@@ -1,4 +1,4 @@
-@startuml er-stats
+@startuml erd-stats
 
 skinparam linetype ortho
 
